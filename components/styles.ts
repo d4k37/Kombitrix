@@ -17,12 +17,11 @@ export const styles = StyleSheet.create({
        
     },
     icon:{
-        width: 24,
-        height: 18,
+   
     },
     title:{
         flex: 1,
-      
+        color: "white",
         fontSize: 30,
         textAlign: "center",
       
@@ -32,6 +31,20 @@ export const styles = StyleSheet.create({
         width: 190,
         height: 190,
         
+        borderStyle: 'solid',
+        borderWidth: 1,
+        borderRadius:8,
+        justifyContent: "space-between",
+        alignItems: "center",
+        paddingVertical: 20,
+
+    },
+    content2:{
+        width: 190,
+        height: 190,
+        borderColor: "blue",
+        borderStyle: 'solid',
+        borderWidth: 5,
         borderRadius:8,
         justifyContent: "space-between",
         alignItems: "center",
@@ -43,21 +56,24 @@ export const styles = StyleSheet.create({
         width:10,
         height:10,
         backgroundColor: "green",
-        top: 7,
-        right: 7,
+    
         position: "absolute",
-        borderColor: "orange",
-        borderWidth: 1,
+       
+        
         borderRadius: 3,
+         borderColor: "red",
+        borderStyle: 'solid',
+        borderWidth: 5,
     },
     checked:{
         width:10,
         height:10,
         backgroundColor: "blue",
-        top: 7,
-        right: 7,
+       
         position: "absolute",      
-        borderRadius: 3,
+        borderColor: "red",
+        borderStyle: 'solid',
+        borderWidth: 5,
     }
 })
 

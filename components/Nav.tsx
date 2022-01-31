@@ -15,7 +15,7 @@ export function Nav(){
 
     return(
         <ScrollView>
-        <View >
+        <View style={styles.container} >
         <View style={styles.retangle}>
         <Category title='Lâmpada'icon={img1} icon2={img6}/>
         <Category title='Ventilador'icon={img2} icon2={img5}/>
@@ -38,8 +38,9 @@ export function Nav(){
 
 const styles = StyleSheet.create({
     container: {
-    color: 'white',
- 
+        backgroundColor: '#0a8cc0',
+        paddingBottom: 50
+        
     },
     box:{
         width: 190,

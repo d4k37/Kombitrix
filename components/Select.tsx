@@ -2,7 +2,7 @@
   
 import React, {useState} from 'react'
 import {RectButton, RectButtonProps} from 'react-native-gesture-handler'
-import{ Text, View, Image, Button, TouchableOpacity } from 'react-native'
+import{ Text, View, Image, Button, TouchableOpacity, Input } from 'react-native'
 import {SvgProps} from 'react-native-svg'
 
 import { LinearGradient } from 'expo-linear-gradient'
@@ -28,18 +28,11 @@ export function Category({
     hasCheckBox = false,
     ...rest
 }: Props){
-    
-    function trocarnumero(){
-        const [active, setActive] = useState("2")
-            if(active === "2"){
-                ()=> setActive("3")
-            }
-            if(active === "3"){
-                ()=> setActive("2")
-            }
-            return active
-        
-    }
+    const [active, setActive] = useState("2")
+  function shot(){
+    ()=> setActive("3")
+  }
+
     return(
        
         <RectButton{...rest}>
@@ -49,11 +42,8 @@ export function Category({
         colors={["transparent", "transparent"]}
        
         >
-              <TouchableOpacity
-              onPress={trocarnumero}
-              
-              >
-             <LinearGradient  
+             
+             <LinearGradient 
              style={[styles.content, 
              {opacity: checked ? 1 : 0.6}]}
              colors={[checked ? "#0896c7":"#00504b", "#00a69c" ]}
@@ -78,7 +68,7 @@ export function Category({
                      {title}
                  </Text>
              </LinearGradient>
-             </TouchableOpacity>
+            
         </LinearGradient>
        
         </RectButton>
