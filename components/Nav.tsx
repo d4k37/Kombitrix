@@ -1,7 +1,14 @@
-import { Text, View, ScrollView, Image } from 'react-native';
+import { Text, View, ScrollView, Image,  } from 'react-native';
 import styled from 'styled-components'
 import { StyleSheet } from 'react-native';
+import { Category } from './Select';
 
+import img1 from '../assets/svgtopng/11.png'
+import img2 from '../assets/svgtopng/2.png'
+import img3 from '../assets/svgtopng/8.png'
+import img4 from '../assets/svgtopng/13.png'
+import img5 from '../assets/svgtopng/5.png'
+import img6 from '../assets/svgtopng/3.png'
 
 
 export function Nav(){
@@ -9,46 +16,21 @@ export function Nav(){
     return(
         <ScrollView>
         <View >
+        <View style={styles.retangle}>
+        <Category title='Lâmpada'icon={img1} icon2={img6}/>
+        <Category title='Ventilador'icon={img2} icon2={img5}/>
+        </View>
+
+        <View style={styles.retangle}>
+        <Category title='Rádio'icon={img3} icon2={img4}/>
+        <Category title='Caixa de Som'icon={img4} icon2={img3}/>
+        </View>
+
+        <View style={styles.retangle}>
+        <Category title='TV'icon={img5} icon2={img2}/>
+        <Category title='TV System'icon={img6} icon2={img1}/>
+        </View>
             
-            <View style={styles.retangle}>
-
-                <View>
-                <Text style={styles.text}>Luzes</Text>
-                <Image style={{width: 100, height: 100}} source={require('../assets/svgtopng/11.png')}/>
-                </View>
-
-                <View>
-                <Text style={styles.text2}>Ventilador</Text>
-                <Image style={{width: 100, height: 100}} source={require('../assets/svgtopng/2.png')}/>
-                </View>
-               
-              
-            
-              
-            </View>
-
-            <View style={styles.linebox}>
-            <View style={styles.box}>
-                <Text>Radio</Text>
-                <Image style={{width: 100, height: 100}} source={require('../assets/svgtopng/8.png')}/>
-            </View>
-            <View style={styles.box}>
-                <Text>Sistema de Som</Text>
-                <Image style={{width: 100, height: 100}} source={require('../assets/svgtopng/13.png')}/>
-            </View>
-            </View>
-
-            <View style={styles.linebox}>
-            <View style={styles.box}>
-                <Text>TV</Text>
-                <Image style={{width: 100, height: 100}} source={require('../assets/svgtopng/5.png')}/>
-            </View>
-            <View style={styles.box}>
-                <Text>Fire TV</Text>
-                <Image style={{width: 100, height: 100}} source={require('../assets/svgtopng/3.png')}/>
-            </View>
-            </View>
-       
         </View >
         </ScrollView>
     )
@@ -75,7 +57,7 @@ const styles = StyleSheet.create({
     retangle:{
         width: 400,
         height: 200,
-        backgroundColor: '#00738f',
+        
         borderStyle: 'solid',
         borderRadius: 10,
         marginTop: 55,
@@ -83,7 +65,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'space-between',
         flexDirection: 'row',
-        paddingHorizontal: 47
+       
     },
     linebox:{
         display: 'flex',
